@@ -2,8 +2,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
+  const pathname = usePathname();
+
   const [visible, setVisible] = useState(true);
   const [lightBackground, setLightBackground] = useState(false);
 
@@ -13,12 +16,15 @@ export default function Header() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       const hero = document.getElementById("top");
-      const heroBottom = hero?.getBoundingClientRect().bottom ?? 600;
 
-      // เปลี่ยนสี Header ตามตำแหน่งของ Hero
-      setLightBackground(heroBottom <= 76);
+      // ถ้าไม่มี Hero เช่น หน้ารอง ให้ใช้พื้นหลัง Header แบบสว่าง
+      const heroBottom = hero?.getBoundingClientRect().bottom;
 
-      // Smart Header
+      setLightBackground(
+        heroBottom === undefined || heroBottom <= 76
+      );
+
+      // Smart Header: ซ่อนเมื่อเลื่อนลง และแสดงเมื่อเลื่อนขึ้น
       const difference = currentScrollY - lastScrollY;
 
       if (currentScrollY < 80) {
@@ -41,7 +47,7 @@ export default function Header() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [pathname]);
 
   return (
     <header
@@ -51,18 +57,43 @@ export default function Header() {
         lightBackground ? "header-light" : "header-dark",
       ].join(" ")}
     >
-      <a className="brand" href="#top">
+      <a className="brand" href="/">
         <span className="brand-mark" />
         LearnDo
       </a>
 
       <nav aria-label="หลัก">
-        <a className="active" href="#top">
+        <a
+          href="/"
+          className={pathname === "/" ? "active" : ""}
+          aria-current={pathname === "/" ? "page" : undefined}
+        >
           หน้าหลัก
         </a>
-        <a href="#about">รู้จักเรา</a>
-        <a href="#work">โครงการ</a>
-        <a href="#contact">ติดต่อเรา</a>
+
+        <a
+          href="/about"
+          className={pathname === "/about" ? "active" : ""}
+          aria-current={pathname === "/about" ? "page" : undefined}
+        >
+          รู้จักเรา
+        </a>
+
+        <a
+          href="/work"
+          className={pathname === "/work" ? "active" : ""}
+          aria-current={pathname === "/work" ? "page" : undefined}
+        >
+          โครงการ
+        </a>
+
+        <a
+          href="/contact"
+          className={pathname === "/contact" ? "active" : ""}
+          aria-current={pathname === "/contact" ? "page" : undefined}
+        >
+          ติดต่อเรา
+        </a>
       </nav>
     </header>
   );

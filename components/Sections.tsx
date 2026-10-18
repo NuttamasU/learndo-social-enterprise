@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import { Phone, MessageCircle, Map, MapPin } from "lucide-react";
 
 const torsilpFont = localFont({
   src: "../public/fonts/TorsilpKhitthuengSamoe.ttf",
@@ -71,7 +72,7 @@ export function Collab() {
           ร่วมพัฒนาไปด้วยกัน
         </p>
 
-        <a className="button outline" /* href="mailto:hello@learndo.co" */ >
+        <a className="button outline" href="/contact" >
           ติดต่อเรา →
         </a>
       </div>
@@ -80,6 +81,72 @@ export function Collab() {
         src="/images/collab.jpg"
         alt="ทีมงาน Learn Do ร่วมกันทำงาน"
       />
+    </section>
+  );
+}
+
+export function Contact() {
+  return (
+    <section className="contact-section" id="contact">
+      <div className="contact-container">
+        <h2 className="contact-title">ติดต่อเรา</h2>
+
+        <div className="contact-grid">
+          {/* เบอร์ติดต่อ */}
+          <div className="contact-card">
+            <div className="contact-icon">
+              <Phone size={20} />
+            </div>
+            <h3>เบอร์ติดต่อ</h3>
+            <a href="tel:0925054994" className="contact-detail">
+              092 505 4994
+            </a>
+          </div>
+
+          {/* Email */}
+          <div className="contact-card">
+            <div className="contact-icon">
+              <MessageCircle size={20} />
+            </div>
+            <h3>Email</h3>
+            <a
+              href="mailto:info.learndo@gmail.com"
+              className="contact-detail"
+            >
+              info.learndo@gmail.com
+            </a>
+          </div>
+
+          {/* เวลาทำการ */}
+          <div className="contact-card">
+            <div className="contact-icon">
+              <Map size={20} />
+            </div>
+            <h3>เวลาทำการ</h3>
+            <p className="contact-detail">
+              Open 9:00–18:00 Closed on
+              <br />
+              Saturday and Sunday
+            </p>
+          </div>
+
+          {/* ที่อยู่ */}
+          <div className="contact-card contact-address">
+            <div className="contact-icon">
+              <MapPin size={20} />
+            </div>
+            <h3>ที่อยู่</h3>
+            <p className="contact-detail">
+              <strong>
+                บริษัท เลิร์นดู วิสาหกิจเพื่อสังคม จำกัด
+              </strong>
+              <br />
+              เลขที่ 68/7 หมู่ที่ 3 ตำบลบางกอบัว
+              อำเภอพระประแดง จังหวัดสมุทรปราการ 10130
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
