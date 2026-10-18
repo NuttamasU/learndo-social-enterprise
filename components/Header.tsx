@@ -88,6 +88,22 @@ export default function Header() {
         </a>
 
         <a
+          href="/activities"
+          className={pathname === "/activities" ? "active" : ""}
+          aria-current={pathname === "/activities" ? "page" : undefined}
+        >
+          กิจกรรม
+        </a>
+
+        <a
+          href="/products"
+          className={pathname === "/products" ? "active" : ""}
+          aria-current={pathname === "/products" ? "page" : undefined}
+        >
+          สินค้า
+        </a>
+
+        <a
           href="/contact"
           className={pathname === "/contact" ? "active" : ""}
           aria-current={pathname === "/contact" ? "page" : undefined}

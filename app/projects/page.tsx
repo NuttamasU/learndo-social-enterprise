@@ -15,7 +15,7 @@ export default function ProjectsPage() {
       }}
     >
       <Header />
-      <h1>รู้จักเรา</h1>
+      <h1>โครงการทั้งหมด</h1>
       <p>หน้านี้กำลังอยู่ระหว่างการพัฒนา</p>
     </main>
   );
