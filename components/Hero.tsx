@@ -32,7 +32,7 @@ export default function Hero() {
             รู้จัก Learn Do <span>→</span>
           </a>
 
-          <a className="button ghost" href="#work">
+          <a className="button ghost" href="#project">
             สิ่งที่เราทำ
           </a>
         </div>

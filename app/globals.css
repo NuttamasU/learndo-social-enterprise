@@ -539,7 +539,7 @@
    13. Projects Section
 ======================================== */
 
-.work {
+.project {
   padding: 30px 3% 58px;
 }
 
@@ -576,7 +576,7 @@
 .project-image {
   height: 210px;
 
-  background-size: 400%;
+  background-size: 100%;
   background-position: center;
 }
 
@@ -624,6 +624,66 @@
   font-weight: 700;
 }
 
+
+/* Project Card Hover Effect */
+.project-card {
+  overflow: hidden;
+  border-radius: 18px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(23, 78, 27, 0.12);
+}
+
+/* Zoom รูปเล็กน้อย */
+.project-image {
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  transition: background-size 0.4s ease;
+}
+
+/* ขยายการ์ดโดยไม่ทำให้รูปหรือข้อความกระโดด */
+.project-card:hover .project-image {
+  transform: scale(1.02);
+}
+
+/* ให้รูปขยายอย่างนุ่มนวล */
+.project-image {
+  transition: transform 0.4s ease;
+}
+
+/* ลิงก์รายละเอียด */
+.project-card .card-copy a {
+  display: inline-block;
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease;
+}
+
+.project-card:hover .card-copy a {
+  transform: translateX(4px);
+  color: #4c8b36;
+}
+
+/* รองรับผู้ใช้ที่ตั้งค่าลด animation */
+@media (prefers-reduced-motion: reduce) {
+  .project-card,
+  .project-image,
+  .project-card .card-copy a {
+    transition: none;
+  }
+
+  .project-card:hover,
+  .project-card:hover .project-image,
+  .project-card:hover .card-copy a {
+    transform: none;
+  }
+}
 
 /* ========================================
    14. Belief Section

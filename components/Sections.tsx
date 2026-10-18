@@ -24,7 +24,7 @@ export function About() {
           และสิ่งแวดล้อมเข้าด้วยกัน
         </p>
 
-        <a className="button outline" href="#collab">
+        <a className="button outline" href="/about">
           รู้จักเราเพิ่มเติม →
         </a>
       </div>

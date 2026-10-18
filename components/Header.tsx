@@ -80,9 +80,9 @@ export default function Header() {
         </a>
 
         <a
-          href="/work"
-          className={pathname === "/work" ? "active" : ""}
-          aria-current={pathname === "/work" ? "page" : undefined}
+          href="/projects"
+          className={pathname === "/projects" ? "active" : ""}
+          aria-current={pathname === "/projects" ? "page" : undefined}
         >
           โครงการ
         </a>

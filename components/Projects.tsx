@@ -3,17 +3,17 @@ import { projects } from "../data/projects";
 
 export default function Projects() {
   return (
-    <section id="work" className="work">
+    <section id="project" className="project">
       <div className="section-heading">
         <div>
-          <p className="eyebrow">• OUR WORK</p>
+          <p className="eyebrow">• OUR PROJECTS</p>
           <h2>โครงการของเรา</h2>
           <p>
             หลากหลายโครงการที่เราลงมือทำ เพื่อชุมชนที่ยั่งยืน
           </p>
         </div>
 
-        <a href="#contact">ดูโครงการทั้งหมด →</a>
+        <a href="/projects">ดูโครงการทั้งหมด →</a>
       </div>
 
       <div className="project-grid">

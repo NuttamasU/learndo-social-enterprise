@@ -4,7 +4,7 @@ import { About, Belief, Collab } from "../../components/Sections";
 import Projects from "../../components/Projects";
 import Footer from "../../components/Footer";
 
-export default function WorkPage() {
+export default function ProjectsPage() {
   return (
     <main
       style={{
