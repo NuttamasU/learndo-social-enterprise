@@ -19,7 +19,7 @@ export type ProjectDetailData = {
 };
 
 export const projectDetails: Record<string, ProjectDetailData> = {
-  "community-tourism": {
+  "project-community-tourism": {
     title: "ท่องเที่ยวชุมชน",
     subtitle:
       "เปิดประสบการณ์ท่องเที่ยวชุมชน สัมผัสวิถีชีวิตและธรรมชาติ พร้อมเรียนรู้เสน่ห์ของท้องถิ่นในมุมที่แตกต่าง",
@@ -48,14 +48,14 @@ export const projectDetails: Record<string, ProjectDetailData> = {
     ],
   },
 
-  "community-waste": {
+  "project-community-waste": {
     title: "จัดการขยะชุมชน",
     subtitle:
       "เปลี่ยนการจัดการขยะให้เป็นเรื่องที่ทุกคนมีส่วนร่วม เพื่อชุมชนที่สะอาดและยั่งยืน",
     location: "คุ้งบางกะเจ้า จังหวัดสมุทรปราการ",
     heroImage: "/images/community-waste.jpg",
     heroImageAlt: "การจัดการขยะในชุมชน",
-    externalUrl: "https://example.com",
+    externalUrl: "https://v0-dashboardfrominn-sdesign.vercel.app/",
     externalLabel: "เยี่ยมชมเว็บไซต์น้องรักษ์",
     sections: [
       {
@@ -79,7 +79,7 @@ export const projectDetails: Record<string, ProjectDetailData> = {
     ],
   },
 
-  "local-food": {
+  "project-local-food": {
     title: "อาหารและภูมิปัญญาท้องถิ่น",
     subtitle:
       "ต่อยอดวัตถุดิบและองค์ความรู้ท้องถิ่น สู่เรื่องราวอาหารที่สะท้อนเอกลักษณ์ของชุมชน",

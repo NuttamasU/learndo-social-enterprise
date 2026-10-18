@@ -1,6 +1,6 @@
 
-import { projects } from "../data/projects";
 import Link from "next/link";
+import { projects } from "../data/projects";
 
 export default function AllProjects() {
   return (
@@ -17,26 +17,29 @@ export default function AllProjects() {
         <div className="all-projects-list">
           {projects.map((project) => (
             <article className="all-project-card" key={project.title}>
-              <div
-                className="all-project-image"
-                style={{
-                  backgroundImage: `url("${project.image}")`,
-                }}
-                role="img"
-                aria-label={project.title}
-              />
+              <Link
+                href={project.href}
+                className="all-project-card-link"
+                aria-label={`ดูรายละเอียดโครงการ ${project.title}`}
+              >
+                <div
+                  className="all-project-image"
+                  style={{
+                    backgroundImage: `url("${project.image}")`,
+                  }}
+                  role="img"
+                  aria-label={project.title}
+                />
 
-              <div className="all-project-content">
-                <h2>{project.title}</h2>
-                <p>{project.description}</p>
+                <div className="all-project-content">
+                  <h2>{project.title}</h2>
+                  <p>{project.description}</p>
 
-                <Link
-                    className="all-project-link"
-                    href={project.href}
-                    >
+                  <span className="all-project-link">
                     ดูรายละเอียด <span aria-hidden="true">→</span>
-                </Link>
-              </div>
+                  </span>
+                </div>
+              </Link>
             </article>
           ))}
         </div>
