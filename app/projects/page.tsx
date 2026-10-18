@@ -1,22 +1,18 @@
+
 import Header from "../../components/Header";
-import Hero from "../../components/Hero";
-import { About, Belief, Collab } from "../../components/Sections";
-import Projects from "../../components/Projects";
 import Footer from "../../components/Footer";
+import AllProjects from "../../components/AllProjects";
+import { Collab } from "../../components/Sections";
 
 export default function ProjectsPage() {
   return (
-    <main
-      style={{
-        minHeight: "100vh",
-        padding: "120px 5% 40px",
-        background: "#fbf8e9",
-        color: "#164f1e",
-      }}
-    >
+    <main className="site-shell">
       <Header />
-      <h1>โครงการทั้งหมด</h1>
-      <p>หน้านี้กำลังอยู่ระหว่างการพัฒนา</p>
+      <div className="page-content">
+        <AllProjects />
+      </div>
+      <Collab />
+      <Footer />
     </main>
   );
 }

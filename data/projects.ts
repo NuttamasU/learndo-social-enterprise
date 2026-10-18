@@ -26,6 +26,6 @@ export const projects = [
     description:
       "เปลี่ยนวัสดุเหลือใช้ในชุมชนให้เกิดคุณค่า พร้อมสร้างอาชีพและความยั่งยืน",
     image: "/images/community-workshop.jpg",
-    href: "#contact",
+    href: "/projects/project-community-workshop",
   },
 ];
