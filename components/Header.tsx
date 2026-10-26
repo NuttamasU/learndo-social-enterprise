@@ -71,12 +71,38 @@ export default function Header() {
           หน้าหลัก
         </a>
 
-        <a
+        {/* <a
           href="/about"
           className={pathname === "/about" ? "active" : ""}
           aria-current={pathname === "/about" ? "page" : undefined}
         >
           รู้จักเรา
+        </a> */}
+
+        <a
+          href="/tourism"
+          className={
+            pathname === "/tourism" ||
+            pathname.startsWith("/tourism/")
+              ? "active"
+              : ""
+          }
+          aria-current={
+            pathname === "/tourism" ||
+            pathname.startsWith("/tourism/")
+              ? "page"
+              : undefined
+          }
+        >
+          ท่องเที่ยวชุมชน
+        </a>
+
+        <a
+          href="/products"
+          className={pathname === "/products" ? "active" : ""}
+          aria-current={pathname === "/products" ? "page" : undefined}
+        >
+          สินค้าชุมชน
         </a>
 
         <a
@@ -87,21 +113,13 @@ export default function Header() {
           โครงการ
         </a>
 
-        <a
+        {/* <a
           href="/activities"
           className={pathname === "/activities" ? "active" : ""}
           aria-current={pathname === "/activities" ? "page" : undefined}
         >
           กิจกรรม
-        </a>
-
-        <a
-          href="/products"
-          className={pathname === "/products" ? "active" : ""}
-          aria-current={pathname === "/products" ? "page" : undefined}
-        >
-          สินค้า
-        </a>
+        </a> */}
 
         <a
           href="/contact"

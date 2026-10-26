@@ -48,7 +48,7 @@ export const projectDetails: Record<string, ProjectDetailData> = {
     ],
   },
 
-  "project-community-waste": {
+  "project-nong-rak": {
     title: "จัดการขยะชุมชน",
     subtitle:
       "เปลี่ยนการจัดการขยะให้เป็นเรื่องที่ทุกคนมีส่วนร่วม เพื่อชุมชนที่สะอาดและยั่งยืน",
@@ -108,7 +108,7 @@ export const projectDetails: Record<string, ProjectDetailData> = {
     ],
   },
 
-  "project-community-workshop": {
+  "project-coconut-biochar": {
     title: "อบรมทักษะชุมชนการทำไบโอชาร์จากกาบมะพร้าว",
     subtitle:
       "เปลี่ยนวัสดุเหลือใช้ในชุมชน ให้กลายเป็นพลังงานสะอาดและโอกาสใหม่ในการพัฒนาชุมชนอย่างยั่งยืน",

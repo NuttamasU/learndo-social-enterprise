@@ -1,31 +1,27 @@
 
 export const projects = [
   {
-    title: "ท่องเที่ยวชุมชน",
-    description:
-      "เปิดประสบการณ์ท่องเที่ยวชุมชน สัมผัสวิถีชีวิตและธรรมชาติ พร้อมเรียนรู้ของท้องถิ่นในมุมที่แตกต่าง",
-    image: "/images/community-tourism.jpg",
-    href: "#/projects/project-community-tourism",
-  },
-  {
-    title: "จัดการขยะชุมชน",
-    description:
-      "แพลตฟอร์มจัดการขยะชุมชน ช่วยกันดูแลชุมชนและลดขยะอย่างเป็นระบบ",
+    title: "น้องรักษ์ ระบบจัดการขยะชุมชน",
+    description: "ส่งเสริมการคัดแยกขยะและการมีส่วนร่วมของชุมชน",
     image: "/images/community-waste.jpg",
-    href: "#/projects/project-community-waste",
+    href: "/projects/#project-nong-rak",
+    category: "waste",
+    sdgs: [11, 12, 13],
   },
   {
-    title: "อาหารและภูมิปัญญาท้องถิ่น",
-    description:
-      "ต่อยอดวัตถุดิบและองค์ความรู้ท้องถิ่น สู่เรื่องราวอาหารที่สะท้อนอัตลักษณ์และคุณค่าของชุมชน",
-    image: "/images/local-food.jpg",
-    href: "#/projects/project-local-food",
-  },
-  {
-    title: "อบรมเพิ่มทักษะชุมชน",
-    description:
-      "เปลี่ยนวัสดุเหลือใช้ในชุมชนให้เกิดคุณค่า พร้อมสร้างอาชีพและความยั่งยืน",
+    title: "อบรมการทำไบโอชาร์จากกาบมะพร้าว",
+    description: "ต่อยอดวัสดุเหลือใช้ในชุมชนสู่การเรียนรู้และใช้ประโยชน์",
     image: "/images/community-workshop.jpg",
-    href: "/projects/project-community-workshop",
+    href: "/projects/project-coconut-biochar",
+    category: "training",
+    sdgs: [12, 13],
+  },
+  {
+    title: "การแปรรูปวัตถุดิบและอาหารท้องถิ่น",
+    description: "เรียนรู้การเพิ่มมูลค่าวัตถุดิบและภูมิปัญญาของชุมชน",
+    image: "/images/local-food.jpg",
+    href: "/projects/#project-local-food",
+    category: "local-food",
+    sdgs: [8, 12],
   },
 ];

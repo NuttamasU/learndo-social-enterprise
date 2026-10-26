@@ -1,17 +1,26 @@
 
 export const services = [
+  // {
+  //   id: "activities",
+  //   title: "Tours & Activities",
+  //   description:
+  //     "ออกไปสัมผัสวิถีชีวิต เรียนรู้ภูมิปัญญาท้องถิ่น และร่วมกิจกรรมที่เชื่อมโยงผู้คนกับธรรมชาติ",
+  //   button: "ค้นหาประสบการณ์",
+  //   image: "/images/community-activity.jpg",
+  //   href: "/activities",
+  // },
   {
-    id: "activities",
-    title: "Tours & Activities",
+    id: "tourism",
+    title: "ท่องเที่ยวชุมชน",
     description:
       "ออกไปสัมผัสวิถีชีวิต เรียนรู้ภูมิปัญญาท้องถิ่น และร่วมกิจกรรมที่เชื่อมโยงผู้คนกับธรรมชาติ",
     button: "ค้นหาประสบการณ์",
-    image: "/images/community-activity.jpg",
-    href: "/activities",
+    image: "/images/community-tourism.jpg",
+    href: "/tourism",
   },
   {
     id: "products",
-    title: "Local Products",
+    title: "สินค้าชุมชน",
     description:
       "ค้นพบผลิตภัณฑ์จากชุมชนที่สะท้อนเอกลักษณ์ท้องถิ่น พร้อมสนับสนุนผู้ผลิตและภูมิปัญญาในพื้นที่",
     button: "เลือกชมสินค้า",

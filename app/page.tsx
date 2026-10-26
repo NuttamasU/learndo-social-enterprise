@@ -11,6 +11,7 @@ export default function Page() {
       <Header />
       <Hero />
       <About />
+      
       <Projects />
       <Services />
       <Belief />
