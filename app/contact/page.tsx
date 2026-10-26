@@ -3,20 +3,20 @@ import Hero from "../../components/Hero";
 import { Contact, Collab } from "../../components/Sections";
 import Projects from "../../components/Projects";
 import Footer from "../../components/Footer";
+import Partners from "@/components/Partners";
 
 export default function ContactPage() {
   return (
     <main
-      style={{
-        minHeight: "100vh",
-        padding: "120px 5% 40px",
-        background: "#fbf8e9",
-        color: "#164f1e",
-      }}
+       className="site-shell" 
     >
       <Header />
-      <Contact />
-      <Collab />
+      <div className="page-content">
+        <Contact />
+        <Collab />  
+        <Partners />
+      </div>
+      <Footer />
     </main>
   );
 }

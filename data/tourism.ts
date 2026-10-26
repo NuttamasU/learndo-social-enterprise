@@ -30,11 +30,11 @@ export const tourismPlaces: TourismPlace[] = [
     travelModes: ["guide"],
   },
   {
-    slug: "community-tour",
+    slug: "suan-pung",
     name: "สวนผึ้ง",
     description:
       "เรียนรู้เรื่องราวท้องถิ่น ผ่านผู้คน อาหาร และภูมิปัญญาของชุมชน",
-    image: "/images/tourism/community-tour.jpg",
+    image: "/images/tourism/suan-pung.jpg",
     area: "ราชบุรี",
     travelModes: ["guide"],
   },
