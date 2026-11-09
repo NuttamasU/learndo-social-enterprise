@@ -110,7 +110,7 @@ export default function Header() {
           className={pathname === "/projects" ? "active" : ""}
           aria-current={pathname === "/projects" ? "page" : undefined}
         >
-          โครงการ
+          โครงการเพื่อสังคม
         </a>
 
         {/* <a

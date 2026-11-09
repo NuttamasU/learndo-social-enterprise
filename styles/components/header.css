@@ -1,0 +1,147 @@
+/* ========================================
+   8. Header
+======================================== */
+
+
+.site-header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 56px;
+  padding: 0 5%;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease;
+
+  will-change: transform;
+}
+
+/* อยู่บน Hero พื้นหลังเข้ม */
+.site-header.header-dark {
+  color: white;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.25) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    rgba(198, 255, 145, 0.2);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* อยู่บนพื้นหลังสีอ่อน */
+.site-header.header-light {
+  color: #174e1b;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.25) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    rgba(198, 255, 145, 0.2);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* โลโก้ */
+.site-header .brand-mark {
+  background: currentColor;
+}
+
+/* เมนู */
+.site-header nav a {
+  color: inherit;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+/* เมนูที่เลือกบน Hero */
+.site-header.header-dark nav .active {
+  color: #174e1b;
+  background: white;
+}
+
+/* เมนูที่เลือกบนพื้นหลังอ่อน */
+.site-header.header-light nav .active {
+  color: #174e1b;
+  background: white;
+}
+
+/* Smart Header */
+.site-header.header-visible {
+  transform: translateY(0);
+}
+
+.site-header.header-hidden {
+  transform: translateY(-100%);
+  pointer-events: none;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.brand-mark {
+  display: block;
+
+  width: 28px;
+  height: 28px;
+
+  border-radius: 50%;
+  background: white;
+}
+
+.site-header nav {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.site-header nav a {
+  padding: 10px 18px;
+  border-radius: 30px;
+}
+
+.site-header nav .active {
+  color: #214d20;
+  background: white;
+}
+
+
+
+@media (max-width: 800px) {
+  .site-header {
+    height: 64px;
+  }
+
+  .site-header nav {
+    gap: 4px;
+    font-size: 12px;
+  }
+
+  .site-header nav a {
+    padding: 8px 6px;
+  }
+
+}

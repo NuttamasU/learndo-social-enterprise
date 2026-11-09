@@ -1,0 +1,10 @@
+/* Shared focus treatment for interactive cards and links */
+:where(
+  .project-card-link,
+  .service-card-link,
+  .all-project-card-link,
+  .related-project-card-link,
+  .tourism-card-link
+):focus-visible {
+  outline-offset: -3px;
+}

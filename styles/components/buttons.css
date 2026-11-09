@@ -1,0 +1,33 @@
+/* ========================================
+   10. Buttons
+======================================== */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 12px 24px;
+  border-radius: 30px;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.button.primary {
+  color: #19521c;
+  background: #baff70;
+}
+
+.button.ghost {
+  border: 1px solid white;
+}
+
+.button.outline {
+  margin-top: 20px;
+
+  border: 1px solid #218b2e;
+  color: #218b2e;
+}
+
+

@@ -1,7 +1,7 @@
 
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import AllProjects from "../../components/AllProjects";
+import AllProjects from "../../components/projects/ProjectsAll";
 import { Collab } from "../../components/Sections";
 
 export default function ProjectsPage() {

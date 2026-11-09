@@ -3,9 +3,9 @@ import { notFound } from "next/navigation";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import TourismDetail from "@/components/TourismDetail";
+import TourismDetail from "@/components/tourism/TourismDetail";
 import { tourismDetails } from "@/data/tourismDetails";
-import TourismCorporate from '@/components/TourismCorporate';
+import TourismCorporate from '@/components/tourism/TourismCorporate';
 
 type Props = {
   params: Promise<{ slug: string }>;

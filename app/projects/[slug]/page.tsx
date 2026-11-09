@@ -2,8 +2,8 @@
 import { notFound } from "next/navigation";
 import Header from "../../../components/Header";
 import Footer from "../../../components/Footer";
-import ProjectDetail from "../../../components/ProjectDetail";
-import RelatedProjects from "../../../components/RelatedProjects";
+import ProjectDetail from "../../../components/projects/ProjectDetail";
+import RelatedProjects from "../../../components/projects/ProjectsRelated";
 import { projectDetails } from "../../../data/projectDetails";
 import { projects } from "../../../data/projects";
 

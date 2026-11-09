@@ -4,7 +4,7 @@ import { IconArrowDown, IconArrowRight } from "@tabler/icons-react";
 
 export default function ProductsHero() {
   return (
-    <section className="products-hero">
+    <section className="inner-page-hero products-hero">
       <div className="products-hero__content">
         <span className="products-eyebrow">
           LOCAL WISDOM, LOCAL STORIES

@@ -1,7 +1,7 @@
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import { About, Belief, Collab } from "../components/Sections";
-import Projects from "../components/Projects";
+import Projects from "../components/projects/Projects";
 import Services from "../components/Services";
 import Footer from "../components/Footer";
 

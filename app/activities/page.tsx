@@ -1,7 +1,7 @@
 import Header from "../../components/Header";
 import Hero from "../../components/Hero";
 import { About, Belief, Collab } from "../../components/Sections";
-import Projects from "../../components/Projects";
+import Projects from "../../components/projects/Projects";
 import Footer from "../../components/Footer";
 
 export default function ProjectsPage() {

@@ -1,0 +1,47 @@
+/* ========================================
+   7. Main Layout
+======================================== */
+
+.site-shell {
+  overflow: hidden;
+  background: #fbf8e9;
+}
+
+/* หน้ารอง: เว้นพื้นที่ด้านบนให้พ้น Fixed Header */
+.page-content {
+  padding-top: 56px;
+}
+
+/* ========================================
+   HERO HEIGHT SYSTEM
+======================================== */
+
+:root {
+  --home-hero-height: 650px;
+  --inner-hero-height: 420px;
+  --page-intro-height: 300px;
+}
+
+/* ========================================
+   SHARED PAGE HERO
+======================================== */
+
+.inner-page-hero {
+  min-height: var(--inner-hero-height);
+}
+
+.projects-page-intro {
+  min-height: var(--page-intro-height);
+}
+
+/* ========================================
+   RESPONSIVE HERO
+======================================== */
+
+@media (max-width: 768px) {
+  :root {
+    --home-hero-height: 520px;
+    --inner-hero-height: 360px;
+    --page-intro-height: 240px;
+  }
+}

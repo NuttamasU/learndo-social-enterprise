@@ -1,7 +1,7 @@
 import Header from "../../components/Header";
 import Hero from "../../components/Hero";
 import { Contact, Collab } from "../../components/Sections";
-import Projects from "../../components/Projects";
+import Projects from "../../components/projects/Projects";
 import Footer from "../../components/Footer";
 import Partners from "@/components/Partners";
 

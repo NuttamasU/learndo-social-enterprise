@@ -1,0 +1,33 @@
+/* ========================================
+   16. Footer
+======================================== */
+
+footer {
+  display: flex;
+  gap: 22%;
+
+  padding: 42px 7%;
+
+  color: white;
+  background: #0b4914;
+
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+footer strong {
+  font-size: 21px;
+}
+
+
+
+@media (max-width: 800px) {
+  footer {
+    flex-direction: column;
+    gap: 20px;
+
+    padding: 34px 7%;
+    font-size: 16px;
+  }
+}
+

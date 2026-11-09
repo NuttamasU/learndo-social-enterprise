@@ -4,7 +4,7 @@ import { IconArrowRight } from "@tabler/icons-react";
 
 export default function TourismHero() {
   return (
-    <section className="tourism-hero" id="top">
+    <section className="inner-page-hero tourism-hero" id="top">
       <div className="tourism-hero__content">
         <h1>
           ท่องเที่ยวชุมชน

@@ -1,0 +1,28 @@
+/* ========================================
+   6. Base Styles
+======================================== */
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background: #fbf8e9;
+    color: #164f1e;
+    font-family: 'IBM Plex Sans Thai', Tahoma, sans-serif;
+    font-weight: 500;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+

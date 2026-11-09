@@ -1,0 +1,1098 @@
+/* ===== 24. Tourism detail page ===== */
+
+.tourism-detail {
+  --color-primary: #174e1b;
+  background: #fffbea;
+  color: #174e1b;
+}
+
+/* Hero */
+
+.tourism-detail-hero {
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.tourism-detail-hero__content {
+  width: min(1200px, calc(100% - 80px));
+  margin: 0 auto;
+  padding: 48px 0;
+}
+
+.tourism-detail-hero__back {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: white;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.tourism-detail-hero__content h1 {
+  margin: 0 0 4px;
+  font-size: clamp(32px, 4vw, 46px);
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+.tourism-detail-hero__content h2 {
+  margin: 0 0 10px;
+  font-size: clamp(20px, 2.5vw, 28px);
+  line-height: 1.5;
+}
+
+.tourism-detail-hero__content > p {
+  max-width: 650px;
+  margin: 0 0 20px;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.tourism-detail-hero__facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.tourism-detail-hero__facts > div {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.tourism-detail-hero__facts span {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.tourism-detail-hero__facts strong {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* About */
+
+.tourism-detail-about {
+  width: min(1200px, calc(100% - 56px));
+  margin: 0 auto;
+  padding: 22px 0 28px;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 36px;
+}
+
+.tourism-detail-eyebrow {
+  display: block;
+  margin-bottom: 10px;
+  color: #218b2e;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.tourism-detail-about__content h2,
+.tourism-detail-activities__heading h2 {
+  margin: 0 0 12px;
+  color: #174e1b;
+  font-size: clamp(24px, 3vw, 32px);
+  line-height: 1.4;
+}
+
+.tourism-detail-about__content p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.tourism-detail-about__image {
+  height: 185px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.tourism-detail-about__image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Travel options */
+
+.tourism-detail-options {
+  width: min(1200px, calc(100% - 56px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.tourism-detail-option {
+  min-width: 0;
+  padding: 14px;
+  display: grid;
+  grid-template-columns: 125px minmax(0, 1fr);
+  gap: 14px;
+  border-radius: 12px;
+  background: #f1eedb;
+}
+
+.tourism-detail-option__image {
+  min-height: 145px;
+  overflow: hidden;
+  border-radius: 7px;
+}
+
+.tourism-detail-option__image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.tourism-detail-option__content {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.tourism-detail-option__leaf {
+  margin-bottom: 2px;
+  font-size: 20px;
+}
+
+.tourism-detail-option__content h3 {
+  margin: 0 0 6px;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.tourism-detail-option__content p {
+  margin: 0 0 12px;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.tourism-detail-option__button {
+  width: 100%;
+  margin-top: auto;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border-radius: 999px;
+  background: #174e1b;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Activities */
+
+.tourism-detail-activities {
+  width: min(1200px, calc(100% - 56px));
+  margin: 0 auto;
+  padding: 30px 0 36px;
+  scroll-margin-top: 90px;
+}
+
+.tourism-detail-activities__heading {
+  margin-bottom: 18px;
+}
+
+.tourism-detail-activities__heading h2 {
+  margin-bottom: 0;
+}
+
+.tourism-detail-activities__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+/* Activity card — inspired by reference image 2 */
+
+.tourism-detail-activity-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #e8e4d7;
+  border-radius: 13px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgb(28 55 24 / 7%);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.tourism-detail-activity-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgb(28 55 24 / 12%);
+}
+
+.tourism-detail-activity-card__link {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: inherit;
+  text-decoration: none;
+}
+
+.tourism-detail-activity-card__image {
+  width: 100%;
+  aspect-ratio: 1.65 / 1;
+  overflow: hidden;
+  background: #f1eedb;
+}
+
+.tourism-detail-activity-card__image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.tourism-detail-activity-card:hover
+  .tourism-detail-activity-card__image img {
+  transform: scale(1.04);
+}
+
+.tourism-detail-activity-card__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 14px;
+}
+
+.tourism-detail-activity-card__category {
+  display: inline-flex;
+  margin-bottom: 8px;
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: #edf2e5;
+  color: #627458;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.tourism-detail-activity-card__body h3 {
+  margin: 0 0 8px;
+  color: #174e1b;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.tourism-detail-activity-card__description {
+  margin: 0 0 12px;
+  color: #52634d;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.tourism-detail-activity-card__meta {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  margin-bottom: 14px;
+  color: #65745b;
+  font-size: 12px;
+}
+
+.tourism-detail-activity-card__meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tourism-detail-activity-card__more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: auto;
+  color: #218b2e;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+  .tourism-detail-activities__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tourism-detail-option {
+    grid-template-columns: 100px minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .tourism-detail-hero {
+    min-height: 380px;
+    background-position: 60% center;
+  }
+
+  .tourism-detail-hero__content {
+    width: calc(100% - 36px);
+    padding: 38px 0;
+  }
+
+  .tourism-detail-hero__content > p {
+    font-size: 14px;
+  }
+
+  .tourism-detail-hero__facts {
+    gap: 14px;
+  }
+
+  .tourism-detail-about,
+  .tourism-detail-options,
+  .tourism-detail-activities {
+    width: calc(100% - 32px);
+  }
+
+  .tourism-detail-about {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .tourism-detail-about__image {
+    height: 210px;
+  }
+
+  .tourism-detail-options {
+    grid-template-columns: 1fr;
+  }
+
+  .tourism-detail-option {
+    grid-template-columns: 105px minmax(0, 1fr);
+  }
+
+  .tourism-detail-activities__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .tourism-detail-activity-card__body {
+    padding: 11px;
+  }
+
+  .tourism-detail-activity-card__body h3 {
+    font-size: 14px;
+  }
+
+  .tourism-detail-activity-card__meta {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 390px) {
+  .tourism-detail-activities__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========================================
+   Tourism App Download
+======================================== */
+
+.tourism-detail-app {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 48px;
+  padding: 64px;
+  margin: 40px 0;
+  background: #f0eedb;
+  border-radius: 16px;
+}
+
+.tourism-detail-app__content h2 {
+  margin: 12px 0;
+  color: var(--color-primary, #174e1b);
+}
+
+.tourism-detail-app__content p {
+  line-height: 1.8;
+}
+
+.tourism-detail-app__downloads {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.tourism-detail-app__qr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 24px;
+  background: #fff;
+  border-radius: 14px;
+  text-align: center;
+}
+
+.tourism-detail-app__qr-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  aspect-ratio: 1;
+  background: #f5f4eb;
+  border-radius: 8px;
+}
+
+.tourism-detail-app__qr-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.tourism-detail-app__platform {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-primary, #174e1b);
+  text-align: left;
+}
+
+.tourism-detail-app__platform span {
+  display: flex;
+  flex-direction: column;
+}
+
+.tourism-detail-app__platform small {
+  color: #777;
+}
+
+.tourism-detail-app__download {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-primary, #174e1b);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* ========================================
+   Local Trips
+======================================== */
+
+.tourism-detail-activities__heading p {
+  max-width: 680px;
+  margin-top: 12px;
+  line-height: 1.8;
+}
+
+.tourism-detail-activities__intro {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 28px 0 20px;
+  padding: 18px 22px;
+  background: #f0eedb;
+  border-radius: 12px;
+}
+
+.tourism-detail-activities__intro > span {
+  font-size: 1.8rem;
+}
+
+.tourism-detail-activities__intro h3 {
+  margin-bottom: 4px;
+  color: var(--color-primary, #174e1b);
+}
+
+.tourism-detail-activities__intro p {
+  font-size: 0.9rem;
+}
+
+/* ========================================
+   Trip Highlight Card
+======================================== */
+
+.tourism-detail-activity-card {
+  overflow: hidden;
+  background: #f0eedb;
+  border-radius: 14px;
+}
+
+.tourism-detail-activity-card__image {
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+.tourism-detail-activity-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.tourism-detail-activity-card:hover
+.tourism-detail-activity-card__image img {
+  transform: scale(1.05);
+}
+
+.tourism-detail-activity-card__body {
+  padding: 18px;
+}
+
+.tourism-detail-activity-card__category {
+  color: var(--color-primary, #174e1b);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.tourism-detail-activity-card__body h3 {
+  margin: 6px 0;
+  color: var(--color-primary, #174e1b);
+  font-size: 1.1rem;
+}
+
+.tourism-detail-activity-card__description {
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* ========================================
+   LINE Contact
+======================================== */
+
+.tourism-detail-activities__contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-top: 36px;
+  padding: 28px;
+  background: #f0eedb;
+  border-radius: 14px;
+}
+
+.tourism-detail-activities__contact h3 {
+  color: var(--color-primary, #174e1b);
+  margin-bottom: 6px;
+}
+
+.tourism-detail-activities__contact p {
+  font-size: 0.9rem;
+}
+
+.tourism-detail-activities__line {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-shrink: 0;
+  padding: 12px 24px;
+  color: #fff;
+  background: var(--color-primary, #174e1b);
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.tourism-detail-activities__line.is-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ========================================
+   Responsive
+======================================== */
+
+@media (max-width: 768px) {
+  .tourism-detail-app {
+    grid-template-columns: 1fr;
+    padding: 32px 20px;
+    gap: 28px;
+  }
+
+  .tourism-detail-app__downloads {
+    gap: 12px;
+  }
+
+  .tourism-detail-app__qr {
+    padding: 14px 10px;
+  }
+
+  .tourism-detail-app__qr-image {
+    width: 100%;
+    max-width: 120px;
+  }
+
+  .tourism-detail-activities__contact {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tourism-detail-activities__line {
+    width: 100%;
+  }
+}
+
+/* ========================================
+   Tourism App Download Modal
+======================================== */
+
+.tourism-detail-app-trigger {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.tourism-app-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 24px;
+
+  background: rgba(12, 30, 14, 0.65);
+  backdrop-filter: blur(5px);
+
+  animation: tourism-modal-fade 0.2s ease;
+}
+
+.tourism-app-modal__content {
+  position: relative;
+
+  width: 100%;
+  max-width: 620px;
+  max-height: calc(100dvh - 48px);
+
+  overflow-y: auto;
+
+  padding: 36px;
+
+  background: #fffdf2;
+  border-radius: 20px;
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+
+  animation: tourism-modal-show 0.25s ease;
+}
+
+.tourism-app-modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.tourism-app-modal__header h2 {
+  margin-top: 10px;
+
+  color: var(--color-primary, #174e1b);
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.tourism-app-modal__close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  width: 38px;
+  height: 38px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #f0eedb;
+  color: #174e1b;
+
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.tourism-app-modal__close:hover {
+  background: #e2e0cd;
+}
+
+.tourism-app-modal__description {
+  margin: 16px 0 24px;
+
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.tourism-app-modal__downloads {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.tourism-app-modal__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+
+  padding: 20px 16px;
+
+  background: #f0eedb;
+  border-radius: 14px;
+}
+
+.tourism-app-modal__platform {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  width: 100%;
+
+  color: var(--color-primary, #174e1b);
+}
+
+.tourism-app-modal__platform div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.tourism-app-modal__platform strong {
+  font-size: 1rem;
+}
+
+.tourism-app-modal__platform span {
+  color: #777;
+  font-size: 0.75rem;
+}
+
+.tourism-app-modal__qr {
+  width: 100%;
+  max-width: 190px;
+  aspect-ratio: 1;
+
+  padding: 10px;
+
+  background: #fff;
+  border-radius: 10px;
+}
+
+.tourism-app-modal__qr img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+.tourism-app-modal__card > p {
+  color: #666;
+  font-size: 0.78rem;
+  text-align: center;
+}
+
+.tourism-app-modal__note {
+  margin-top: 20px;
+
+  color: #888;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+/* ========================================
+   Local Trips / Trip Highlights
+======================================== */
+
+.tourism-detail-activities {
+  scroll-margin-top: 110px;
+}
+
+.tourism-detail-activities__heading p {
+  max-width: 680px;
+  margin-top: 12px;
+  line-height: 1.8;
+}
+
+.tourism-detail-activities__intro {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  margin: 28px 0 20px;
+  padding: 18px 22px;
+
+  background: #f0eedb;
+  border-radius: 12px;
+}
+
+.tourism-detail-activities__intro-icon {
+  flex-shrink: 0;
+  font-size: 1.8rem;
+}
+
+.tourism-detail-activities__intro h3 {
+  margin-bottom: 4px;
+  color: var(--color-primary, #174e1b);
+}
+
+.tourism-detail-activities__intro p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* ========================================
+   Trip Highlight Card
+======================================== */
+
+.tourism-detail-activity-card {
+  overflow: hidden;
+
+  background: #f0eedb;
+  border-radius: 14px;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.tourism-detail-activity-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(23, 78, 27, 0.1);
+}
+
+.tourism-detail-activity-card__image {
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+.tourism-detail-activity-card__image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+.tourism-detail-activity-card:hover
+.tourism-detail-activity-card__image img {
+  transform: scale(1.05);
+}
+
+.tourism-detail-activity-card__body {
+  padding: 18px;
+}
+
+.tourism-detail-activity-card__category {
+  color: var(--color-primary, #174e1b);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.tourism-detail-activity-card__body h3 {
+  margin: 6px 0;
+
+  color: var(--color-primary, #174e1b);
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.tourism-detail-activity-card__description {
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* ========================================
+   LINE Contact
+======================================== */
+
+.tourism-detail-activities__contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+
+  margin-top: 36px;
+  padding: 28px;
+
+  background: #f0eedb;
+  border-radius: 14px;
+}
+
+.tourism-detail-activities__contact-content h3 {
+  margin-bottom: 6px;
+  color: var(--color-primary, #174e1b);
+}
+
+.tourism-detail-activities__contact-content p {
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.tourism-detail-activities__line {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  flex-shrink: 0;
+
+  padding: 12px 24px;
+
+  color: #fff;
+  background: var(--color-primary, #174e1b);
+
+  border-radius: 30px;
+
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: background 0.2s ease;
+}
+
+a.tourism-detail-activities__line:hover {
+  background: #0d3012;
+}
+
+.tourism-detail-activities__line.is-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ========================================
+   Modal Animation
+======================================== */
+
+@keyframes tourism-modal-fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes tourism-modal-show {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ========================================
+   Responsive
+======================================== */
+
+@media (max-width: 768px) {
+  .tourism-app-modal {
+    padding: 16px;
+  }
+
+  .tourism-app-modal__content {
+    padding: 24px 18px;
+    max-height: calc(100dvh - 32px);
+    border-radius: 16px;
+  }
+
+  .tourism-app-modal__header h2 {
+    font-size: 1.2rem;
+  }
+
+  .tourism-app-modal__downloads {
+    gap: 10px;
+  }
+
+  .tourism-app-modal__card {
+    padding: 14px 10px;
+  }
+
+  .tourism-app-modal__qr {
+    max-width: 150px;
+  }
+
+  .tourism-detail-activities__contact {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tourism-detail-activities__line {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .tourism-app-modal__content {
+    padding: 22px 14px;
+  }
+
+  .tourism-app-modal__downloads {
+    gap: 8px;
+  }
+
+  .tourism-app-modal__card {
+    padding: 12px 8px;
+  }
+
+  .tourism-app-modal__qr {
+    padding: 6px;
+  }
+
+  .tourism-app-modal__platform {
+    gap: 6px;
+  }
+
+  .tourism-app-modal__platform strong {
+    font-size: 0.9rem;
+  }
+
+  .tourism-app-modal__platform span {
+    font-size: 0.68rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tourism-app-modal,
+  .tourism-app-modal__content {
+    animation: none;
+  }
+
+  .tourism-detail-activity-card,
+  .tourism-detail-activity-card__image img {
+    transition: none;
+  }
+}
+
+.tourism-detail-activities {
+  scroll-margin-top: 110px;
+  scroll-behavior: smooth;
+}
