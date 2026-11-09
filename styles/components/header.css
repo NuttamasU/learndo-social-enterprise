@@ -4,7 +4,7 @@
 
 .site-header {
   position: fixed;
-  top: 14px;
+  top: 12px;
   left: 50%;
   z-index: 1000;
 
@@ -14,12 +14,12 @@
 
   width: calc(100% - 8%);
   max-width: 1440px;
-  height: 72px;
+  height: 56px;
 
-  padding: 0 28px;
+  padding: 0 24px;
 
   border: 1px solid transparent;
-  border-radius: 50px;
+  border-radius: 40px;
 
   transition:
     transform 0.35s ease,
@@ -81,23 +81,23 @@
   align-items: center;
   justify-content: center;
 
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
 
   border: 1.5px solid currentColor;
   border-radius: 50%;
 }
 
 .brand-mark span {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
 
   border-radius: 50%;
   background: currentColor;
 }
 
 .brand-name {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   letter-spacing: -0.7px;
 }
@@ -109,9 +109,9 @@
 .desktop-nav {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 3px;
 
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
 }
 
@@ -120,7 +120,7 @@
   align-items: center;
   justify-content: center;
 
-  padding: 11px 17px;
+  padding: 8px 14px;
 
   color: inherit;
   text-decoration: none;
@@ -136,16 +136,16 @@
 
 /* Hover */
 .desktop-nav a:hover {
-  background: rgba(255, 255, 255, 0.14);
+  background: rgba(128, 128, 128, 0.12);
 }
 
-/* Active on dark background */
+/* Active - Dark Header */
 .header-dark .desktop-nav a.active {
   color: #174e1b;
   background: #f1eedb;
 }
 
-/* Active on light background */
+/* Active - Light Header */
 .header-light .desktop-nav a.active {
   color: #f1eedb;
   background: #174e1b;
@@ -174,13 +174,13 @@
 }
 
 /* ----------------------------------------
-   Responsive
+   Tablet
 ---------------------------------------- */
 
 @media (max-width: 1000px) {
   .site-header {
     width: calc(100% - 5%);
-    padding: 0 20px;
+    padding: 0 18px;
   }
 
   .desktop-nav {
@@ -189,37 +189,41 @@
   }
 
   .desktop-nav a {
-    padding: 10px 11px;
+    padding: 8px 9px;
   }
 }
+
+/* ----------------------------------------
+   Mobile
+---------------------------------------- */
 
 @media (max-width: 800px) {
   .site-header {
     top: 10px;
 
     width: calc(100% - 24px);
-    height: 60px;
+    height: 52px;
 
-    padding: 0 18px;
+    padding: 0 16px;
 
-    border-radius: 20px;
+    border-radius: 18px;
   }
 
   .brand-name {
-    font-size: 19px;
+    font-size: 17px;
   }
 
   .brand-mark {
-    width: 27px;
-    height: 27px;
+    width: 23px;
+    height: 23px;
   }
 
-  /* Hide desktop menu */
+  /* Hide Desktop Navigation */
   .desktop-nav {
     display: none;
   }
 
-  /* Menu Toggle */
+  /* Mobile Menu Button */
   .mobile-menu-toggle {
     display: flex;
     flex-direction: column;
@@ -235,6 +239,7 @@
     color: inherit;
     background: transparent;
     border: none;
+
     cursor: pointer;
   }
 
@@ -252,6 +257,7 @@
       width 0.25s ease;
   }
 
+  /* Hamburger Animation */
   .menu-open .mobile-menu-toggle span:first-child {
     transform: translateY(3.5px) rotate(45deg);
   }
@@ -260,7 +266,7 @@
     transform: translateY(-3.5px) rotate(-45deg);
   }
 
-  /* Dropdown */
+  /* Mobile Dropdown */
   .mobile-nav {
     position: absolute;
     top: calc(100% + 10px);
@@ -272,11 +278,11 @@
     width: 100%;
     padding: 12px;
 
+    color: #174e1b;
+    background: #f1eedb;
+
     border: 1px solid rgba(23, 78, 27, 0.12);
     border-radius: 20px;
-
-    background: #f1eedb;
-    color: #174e1b;
 
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
 
@@ -311,6 +317,10 @@
   }
 }
 
+/* ----------------------------------------
+   Animation
+---------------------------------------- */
+
 @keyframes menuReveal {
   from {
     opacity: 0;
@@ -323,6 +333,10 @@
   }
 }
 
+/* ----------------------------------------
+   Accessibility
+---------------------------------------- */
+
 @media (prefers-reduced-motion: reduce) {
   .site-header,
   .site-header *,
@@ -332,69 +346,3 @@
   }
 }
 
-/* Header */
-.site-header {
-  top: 12px;
-  height: 56px;
-  padding: 0 24px;
-
-  width: calc(100% - 8%);
-  max-width: 1440px;
-
-  border-radius: 40px;
-}
-
-/* Brand */
-.brand-mark {
-  width: 24px;
-  height: 24px;
-}
-
-.brand-mark span {
-  width: 8px;
-  height: 8px;
-}
-
-.brand-name {
-  font-size: 18px;
-}
-
-/* Navigation */
-.desktop-nav {
-  gap: 3px;
-  font-size: 13px;
-}
-
-.desktop-nav a {
-  padding: 8px 14px;
-}
-
-/* Tablet */
-@media (max-width: 1000px) {
-  .site-header {
-    padding: 0 18px;
-  }
-
-  .desktop-nav a {
-    padding: 8px 9px;
-  }
-}
-
-/* Mobile */
-@media (max-width: 800px) {
-  .site-header {
-    top: 10px;
-    height: 52px;
-    padding: 0 16px;
-    border-radius: 18px;
-  }
-
-  .brand-name {
-    font-size: 17px;
-  }
-
-  .brand-mark {
-    width: 23px;
-    height: 23px;
-  }
-}

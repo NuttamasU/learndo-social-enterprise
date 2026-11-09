@@ -1285,3 +1285,22 @@
   }
 }
 
+/* ========================================
+   Tourism Hero — Image Height Fix
+======================================== */
+
+/* Desktop */
+.tourism-hero__visual {
+  height: 340px;
+  min-height: 340px;
+  align-self: center;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .tourism-hero__visual {
+    height: 250px;
+    min-height: 250px;
+    align-self: auto;
+  }
+}

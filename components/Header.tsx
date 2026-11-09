@@ -29,13 +29,27 @@ export default function Header() {
 
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
+
+      // ตรวจสอบตำแหน่ง Hero
       const hero = document.getElementById("top");
       const heroBottom = hero?.getBoundingClientRect().bottom;
 
-      setLightBackground(
-        heroBottom === undefined || heroBottom <= 76
-      );
+      // Tourism และ Products ใช้พื้นหลังสีอ่อนตั้งแต่ต้น
+      // หน้าอื่นเปลี่ยนสีตามตำแหน่ง Scroll
+      const isLightPage =
+        pathname === "/tourism" ||
+        pathname === "/products";
 
+      if (isLightPage) {
+        setLightBackground(true);
+      } else {
+        setLightBackground(
+          heroBottom === undefined || heroBottom <= 76
+        );
+      }
+
+      // ซ่อน Header เมื่อเลื่อนลง
+      // แสดง Header เมื่อเลื่อนขึ้น
       const difference = currentScrollY - lastScrollY;
 
       if (currentScrollY < 80) {
@@ -61,6 +75,7 @@ export default function Header() {
     };
   }, [pathname]);
 
+  // ปิด Mobile Menu เมื่อเปลี่ยนหน้า
   useEffect(() => {
     setMenuOpen(false);
   }, [pathname]);
@@ -74,10 +89,12 @@ export default function Header() {
         menuOpen ? "menu-open" : "",
       ].join(" ")}
     >
+      {/* Brand */}
       <Link href="/" className="brand">
         <span className="brand-mark">
           <span />
         </span>
+
         <span className="brand-name">LearnDo</span>
       </Link>
 
