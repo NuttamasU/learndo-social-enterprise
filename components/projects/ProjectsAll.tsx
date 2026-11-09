@@ -111,7 +111,7 @@ export default function AllProjects() {
     <main className="all-projects">
       <div className="all-projects-container">
         {/* Page heading */}
-        <header className="all-projects-heading">
+        {/* <header className="all-projects-heading">
           <span className="projects-eyebrow">
             OUR WORK & IMPACT
           </span>
@@ -122,7 +122,7 @@ export default function AllProjects() {
             เราทำงานร่วมกับชุมชนผ่านการท่องเที่ยว การจัดการสิ่งแวดล้อม
             และการพัฒนาทักษะ เพื่อสร้างโอกาสและคุณค่าที่ยั่งยืน
           </p>
-        </header>
+        </header> */}
 
         {/* Category filter */}
         <nav
